@@ -1,0 +1,82 @@
+live_config_reload: true
+
+env:
+  TERM: xterm-256color
+
+window:
+  opacity: 1.0
+  decorations: full
+  dynamic_title: true
+  padding:
+    x: 8
+    y: 8
+
+font:
+  normal:
+    family: terminal-font
+    style: Regular
+  bold:
+    family: terminal-font
+    style: Regular
+  italic:
+    family: terminal-font
+    style: Italic
+  size: 12.0
+
+shell:
+  program: /usr/local/bin/zsh
+  args:
+    - -l
+
+key_bindings:
+  - { key: C, mods: Control|Alt, action: Copy }
+  - { key: V, mods: Control|Alt, action: Paste }
+  - { key: Up, mods: Control|Alt, action: IncreaseFontSize }
+  - { key: Down, mods: Control|Alt, action: DecreaseFontSize }
+  - { key: Key0, mods: Control|Alt, action: ResetFontSize }
+  - { key: PageUp, mods: Shift, action: ScrollPageUp }
+  - { key: PageDown, mods: Shift, action: ScrollPageDown }
+  - { key: Home, mods: Shift, action: ScrollToTop }
+  - { key: End, mods: Shift, action: ScrollToBottom }
+  - { key: F, mods: Control|Alt, action: SearchForward }
+  - { key: B, mods: Control|Alt, action: SearchBackward }
+  - { key: Space, mods: Control, action: ToggleViMode }
+  - { key: Escape, action: ToggleViMode, mode: Vi }
+  - {
+      key: Return,
+      mods: Control|Alt,
+      action: SpawnNewInstance
+    }
+
+  #import:
+  #- ~/.config/alacritty/themes/ca
+colors:
+  # Default colors
+  primary:
+    # hard contrast: background = '#1d2021'
+    background: '#32302f'
+    # soft contrast: background = '#32302f'
+    foreground: '#ebdbb2'
+
+  # Normal colors
+  normal:
+    black: '#282828'
+    red: '#cc241d'
+    green: '#98971a'
+    yellow: '#d79921'
+    blue: '#458588'
+    magenta: '#b16286'
+    cyan: '#689d6a'
+    white: '#a89984'
+
+  # Bright colors
+  bright:
+    black: '#928374'
+    red: '#fb4934'
+    green: '#b8bb26'
+    yellow: '#fabd2f'
+    blue: '#83a598'
+    magenta: '#d3869b'
+    cyan: '#8ec07c'
+    white: '#ebdbb2'
+theme: Gruvbox-Dark

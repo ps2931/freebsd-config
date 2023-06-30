@@ -1,0 +1,19 @@
+# check default sound device
+cat /dev/sndstat 
+
+# /etc/rc.conf
+sound_load="YES"
+snd_hda_load="YES"
+
+# install xfce4 plugin
+pkg install xfce4-pulseaudio-plugin
+
+# sync date and time
+sysrc ntpdate_enable="YES"
+sysrc ntpd_enable="YES"
+service ntpd start
+service ntpdate start
+ntpdate -v -b in.pool.ntp.org
+
+# refresh dhcp
+/etc/rc.d/dhclient restart re0
