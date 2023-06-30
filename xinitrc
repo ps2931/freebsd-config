@@ -1,5 +1,7 @@
 # utf-8
 export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+export MM_CHARSET=UTF-8
 
 # display
 xrandr --output HDMI-0 --mode 1920x1080 --rate 60
